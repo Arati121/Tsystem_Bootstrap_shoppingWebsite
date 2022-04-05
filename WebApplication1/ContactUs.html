@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title></title>
     <style>
+        
         .topnav {
             overflow: hidden;
             background-color: #e9e9e9;
@@ -15,9 +16,12 @@
                 display: block;
                 color: black;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 14px 16px ;
                 text-decoration: none;
                 font-size: 17px;
+               
+            
+             
             }
 
                 /* Change the color of links on hover */
@@ -41,74 +45,116 @@
                 margin-right: 16px;
                 font-size: 17px;
             }
-       .contact-content-section
-       {
-          text-align:center;
-          background-color:lightblue;
-          height:200px;
-       }
-       .col-md-6 .col-md-12 .col-lg-12 .col-sm-12
-       {
-           height:100px;
-       }
+        input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 10px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+       
+            bottom:0px;
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        /* Add a background color and some padding around the form */
+        .container {
+            position: center;
+            bottom:30px;
+            border-radius: 5px;
+            background-color: #ffa366;
+            padding: 15px;
+            width: 30% !important;
+            right: 500px;
+            top: 0px;
+            margin: 22px auto;
+            position:center;
+            height:500px;
+           
+
+           
+        }
         .footer {
-            position: fixed;
+             position:page absolute;
             left: 0;
             bottom: 200px;
             width: 100%;
             background-color: #f0f5f5;
             color: black;
             text-align: center;
+          
         }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)and (-webkit-min-device-pixel-ratio: 1) {
+            .card {
+                top: 15px;
+                left: 46px;
+                width: 87%;
+               
+            }
+        }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            .card {
+                top: 15px;
+                left: 46px;
+                width: 87%;
+               
+            }
+        }
+        
     </style>
        
 </head>
 
-<body>
+<body bgcolor="#33475b">
     <div class="topnav">
         <a class="active" href="Bootstrap_shoppingsite.html">Home</a>
         <a href="AboutUS.html">About Us</a>
-        <a href="ContactUs.html">Contact Us</a>
+        <a href="ContactUs.html" ba>Contact Us </a>
 
     </div>
-    <section id="contact-content" class="contact-content-section">
-        <div class="container">
-            <div class="yl-section-title text-center yl-headline position-relative">
 
+    <div class="card" >
+        <div class="card-body">
+            <div class="container">
+                <form action="action_page.php">
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" name="Email" placeholder="Email">
+
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
             </div>
-            <div class="row">
-                <h1>
-                    Contact Us
-                </h1>
-                <div class="col-md-6">
-                    <div class="yl-contact-form-wrap yl-headline">
-                        <div class="yl-contact-form-area" id="frmContact2">
-                            <div class="yl-contact-form-input">
-                                <div class="row clearfix">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 pb-20 text-center">
-
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12"> <input type="text" name="name3" id="name3" placeholder="Your Name*" class="form-control demoInputBox" required=""> <span id="name3-info" class="info"></span> </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12"> <input type="email" name="email3" id="email3" placeholder="Your email address*" class="form-control demoInputBox" required=""> <span id="email3-info" class="info"></span> </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12"> <input type="text" name="subject" id="name3" placeholder="Write something" class="form-control demoInputBox" required=""> <span id="name3-info" class="info"></span> </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <input type="text" name="phone3" id="phone3" placeholder="Your Phone number*" class="form-control demoInputBox" required=""> <span id="phone3-info" class="info"></span>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <button class="btn2" type="submit" id="send3-btn" name="submit" onclick="sendinner3();" value="Send message">Submit <i class="fas fa-arrow-right"></i></button>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="m-t30" id="mail-status3"></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    </section>
+        </div>
+    </div>
+   
     <div class="footer">
         <p>@2022 All rights Reserved Terms of use and Privacy Policy shopping.com</p>
     </div>
